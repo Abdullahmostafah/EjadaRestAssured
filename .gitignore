@@ -1,25 +1,26 @@
 #############################################
-###   Allow only essential project files  ###
+###   Ignore everything by default        ###
 #############################################
-
-!pom.xml
-!testng.xml
-!mvnw
-!mvnw.bat
-!allure-wrapper.bat
-!src/
-!src/**
-
+/*
+!/.gitignore
+!/pom.xml
+!/TestNG.xml
+!/mvnw
+!/mvnw.bat
+!/allure-wrapper.bat
 #############################################
-###   Ignore everything else by default   ###
+###   Allow essential project files       ###
 #############################################
-
-*
+!/src/
+!/src/**
+!/src/main/
+!/src/main/**
+!/src/test/
+!/src/test/**
 
 #############################################
 ###           Ignore IDE Configs          ###
 #############################################
-
 .idea/
 *.iml
 *.ipr
@@ -33,7 +34,6 @@ out/
 #############################################
 ###         Build and Temp Files          ###
 #############################################
-
 target/
 build/
 *.class
@@ -46,7 +46,6 @@ build/
 #############################################
 ###    Ignore Test coverage / cache       ###
 #############################################
-
 coverage/
 .cache/
 jacoco.exec
@@ -54,7 +53,6 @@ jacoco.exec
 #############################################
 ###         Ignore Allure Reports         ###
 #############################################
-
 allure-results/
 allure-report/
 allure-history/
@@ -63,7 +61,6 @@ allure-history/
 #############################################
 ###            Ignore Docker              ###
 #############################################
-
 .docker/
 *.dockerfile
 docker-compose*
@@ -73,7 +70,6 @@ docker-compose*
 #############################################
 ###          Ignore CI/CD tools           ###
 #############################################
-
 .github/
 .pipeline/
 *.jenkinsfile
@@ -82,6 +78,5 @@ docker-compose*
 #############################################
 ###        Ignore OS System Files         ###
 #############################################
-
 .DS_Store
 Thumbs.db
